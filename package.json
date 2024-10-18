@@ -1,0 +1,24 @@
+{
+  "name": "vis-prog-graph",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-react": "cd vis-prog-graph && npm run start",
+    "start-electron": "electron .",
+    "start": "concurrently \"npm run start-react\" \"wait-on http://localhost:3000/ && npm run start-electron\"",
+    "start:debug": "npx electronmon --trace-warnings ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^33.0.1"
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "electron-is-dev": "^3.0.1",
+    "wait-on": "^8.0.1"
+  }
+}
